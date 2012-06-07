@@ -81,4 +81,10 @@ class ImagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def thumbnail
+    @image = Image.find(params[:id])
+    redirect_to @image.dynamic_attachment_url("#{params['width']}x#{params['height']}>")
+  end
+  
 end
