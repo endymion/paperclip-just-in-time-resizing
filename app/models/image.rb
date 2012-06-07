@@ -11,7 +11,6 @@ class Image < ActiveRecord::Base
     :styles => Proc.new { |attachment| attachment.instance.styles }
   attr_accessible :attachment
   
-  @dynamic_style_format = ''
   def dynamic_style_format_symbol
     URI.escape(@dynamic_style_format).to_sym
   end
