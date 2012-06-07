@@ -2,5 +2,7 @@
 
 <%= image_tag @image.attachment.url %>
 
+<%= image_tag @image.dynamic_attachment_url("150x150>") %>
+
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
