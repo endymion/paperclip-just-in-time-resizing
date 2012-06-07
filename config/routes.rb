@@ -1,5 +1,9 @@
 PaperclipJustInTimeResizing::Application.routes.draw do
-  resources :images
+  resources :images do
+    member do
+      get 'thumbnail'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
